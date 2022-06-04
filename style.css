@@ -34,7 +34,7 @@ a {
 ul, li {
     margin: 0;
     padding: 0;
-    list-style: disc;
+    list-style: none;
 }
 
 li {
@@ -42,15 +42,11 @@ li {
 }
 
 #header {
-    top: 0;
     width: 100%;
-    height: 100px;
-    position: fixed;
     background-color: var(--color-blue-dark);
     background-size: cover;
     background-blend-mode: multiply;
     color: var(--color-white);
-    z-index: 1;
 }
 
 .header-block {
@@ -67,15 +63,30 @@ li {
     text-align: center;
 }
 
+#nav {
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 30px;
+    left: 20px;
+    width: 100%;
+    margin: 0 auto;
+    height: auto;
+}
+
 #navLinks {
     display: flex;
-    flex-direction: row;
+    flex-direction: raw;
     flex-wrap: wrap;
     justify-content: space-around;
-    align-items: center;
+    text-align: center;
+    background-color: var(--color-blue-dark);
+    border-radius: 10px;
+    padding: 2px 5px;
 }
 
 .nav-link {
+    min-width: 150px;
     display: inline-block;
     font-size: 1.2em;
     padding: 4px 10px;
@@ -95,7 +106,8 @@ li {
 }
 
 .section-title {
-    margin: 20px 0;
+    margin: 10px 0;
+    padding: 10px 0;
     font-size: 2em;
     color: var(--color-grey);
 }
@@ -113,11 +125,10 @@ li {
     margin-top: 30px;
 }
 
-#creerRoadmap::before {
-    content: '';
-    display: block;
-    height: 100px;
+#creerRoadmap li {
+    list-style: disc;
 }
+
 
 .item::before {
     content: '';
@@ -170,6 +181,7 @@ li {
 #myWorks {
     color: var(--color-grey);
     margin: 30px 0;
+    padding-top: 40px;
 }
 
 #portfolio {
@@ -225,9 +237,9 @@ li {
 }
 
 @media (max-width: 900px) {
-
     #header {
         height: auto;
+        padding-top: 45px;
     }
 
     .header-block {
@@ -237,7 +249,16 @@ li {
         text-align: center;
     }
 
+    #nav {
+        position: fixed;
+        top: 0;
+        left: auto;
+        z-index: 1;
+        margin: 5px auto;
+    }
+
     #navLinks {
+        flex-direction: row;
         margin: 10px 0;
         font-size: 0.9em;
         margin: 0;
@@ -266,12 +287,6 @@ li {
 
     #creerRoadmap {
         margin: 3px 0;
-    }
-
-    #creerRoadmap::before {
-        content: '';
-        display: block;
-        height: 145px;
     }
 
     .item-portfolio {
