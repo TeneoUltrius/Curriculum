@@ -208,7 +208,7 @@ li {
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    transition: background-color 0.3s ease-in-out;
+    transition: background-color .3s ease-in-out;
 }
 
 .item-portfolio:hover {
@@ -264,7 +264,7 @@ li {
     #navLinks {
         flex-direction: row;
         margin: 10px 0;
-        font-size: 0.9em;
+        font-size: .9em;
         margin: 0;
     }
 
